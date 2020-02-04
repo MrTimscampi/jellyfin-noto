@@ -1,6 +1,6 @@
 newlines = []
 
-with open("font-faces.css", "r") as f:
+with open("noto.css", "r") as f:
     lines = f.readlines()
 
 for key, line in enumerate(lines):
@@ -13,6 +13,6 @@ for key, line in enumerate(lines):
             line = line.replace(";", ",\n    url(fonts/notosans/woff/" + name)
     newlines.append(line)
 
-with open("font-faces.css","w") as f:
+with open("noto.css", "w") as f:
     for line in newlines:
         f.write(line)
